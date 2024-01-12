@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    /> -->
+    <script>
+      tailwind.config = {
+        dark: "class",
+        theme: {
+          extend: {
+            colors: {
+              white: "#FFF",
+              black: "#000",
+              "blue-2": "#ADD7F6",
+              "blue-1": "#87BFFF",
+              "blue-0": "#3F8EFC",
+              "blue+1": "#2667FF",
+              "blue+2": "#3B28CC",
+              bluepurple: "#4633D7",
+              navyblue: "#1F20AE",
+              blackbg: "#14181B",
+              red: "#C33332",
+              orange: "#D9822B",
+              mainbg: "#1D2428",
+              gray: "#95A1AC",
+              blue: "#3a32a7",
+              bgorange: "#E4A86C",
+            },
+          },
+          screens: {
+            sm: { max: "639px" },
+            md: { max: "866px" },
+            lg: { min: "867px", max: "1100px" },
+            xl: { min: "1100px", max: "1279px" },
+            "2xl": { min: "1280px", max: "1335px" },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="w-full bg-white dark:bg-[#1D2428]">
+    <header
+      class="flex justify-between md:flex-col md:justify-start md:pt-8 md:gap-4 items-start home-header"
+    >
+      <div class="flex gap-2 justify-center">
+        <a href="./index.html">
+          <i
+            class="fa-solid fa-house text-3xl md:text-2xl hidden dark:block"
+          ></i>
+          <i
+            class="fa-solid fa-house text-3xl md:text-2xl dark:hidden"
+            style="color: #ffffff"
+          ></i>
+        </a>
+        <p class="font-semibold text-3xl md:text-xl text-white dark:text-black">
+          Caterings & Tiffins
+        </p>
+      </div>
+      <div class="flex gap-2">
+        <button class="home-button">Register</button>
+        <button class="home-button">Signin</button>
+      </div>
+    </header>
+    <div
+      class="absolute home-order-box bg-white dark:bg-blackbg bg custom-width-30 md:w-full rounded-xl p-4 items-center flex flex-col gap-3"
+    >
+      <p class="text-black dark:text-white md:text-xl text-2xl font-semibold">
+        Choose your service
+      </p>
+      <div class="w-full flex justify-around md:flex-col md:gap-4">
+        <a
+          href="./catering.html"
+          class="bg-red custom-width-45 md:w-full p-2 text-white font-semibold rounded-lg flex items-center justify-center"
+        >
+          CATERING SERVICE
+        </a>
+        <a
+          href="./tiffin.html"
+          class="bg-orange custom-width-45 md:w-full p-2 text-white font-semibold rounded-lg flex items-center justify-center"
+        >
+          TIFFIN SERVICE</a
+        >
+      </div>
+    </div>
+    <div class="flex flex-col w-full items-center mt-32 md:mt-42 py-12 gap-16">
+      <div class="w-4/5 md:w-11/12 flex flex-col gap-4">
+        <p class="text-black dark:text-white font-semibold text-xl md:text-lg">
+          Explore Our Catering & Tiffin service providers near you
+        </p>
+        <div
+          class="flex justify-between md:justify-start flex-nowrap items-center w-full md:gap-4 overflow-auto p-4"
+        >
+          <div class="catering-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="catering-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="catering-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="catering-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+        </div>
+        <div
+          class="flex justify-between md:justify-start flex-nowrap items-center w-full md:gap-4 overflow-auto p-4"
+        >
+          <div class="catering-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="catering-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="catering-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="catering-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+        </div>
+        <p class="text-white font-semibold text-xl md:text-lg mt-12 mb-6">
+          Choose Caterers by Occasions
+        </p>
+        <div
+          class="flex justify-between flex-nowrap items-center w-full gap-4 overflow-auto p-4"
+        >
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+        </div>
+        <div
+          class="flex justify-between flex-nowrap items-center w-full gap-4 overflow-auto p-4"
+        >
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+          <div class="home-caterers-occasios-card">
+            <p class="text-gray text-lg font-medium text-center py-4">
+              VIP Caterers
+            </p>
+            <img src="./Asstes/Images/card.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full h-0.5 block dark:bg-blue bg-[#e4a86c]"></div>
+
+      <div class="flex flex-col items-center w-1/2 md:w-11/12 gap-8">
+        <div class="flex flex-col gap-2 items-center">
+          <p
+            class="text-black dark:text-white text-2xl font-semibold md:text-center"
+          >
+            Subscribe to Get Deals on Bookings
+          </p>
+          <p class="text-gray text-base font-semibold md:text-center">
+            Signup & Get Discount Updates on Every Bookings
+          </p>
+        </div>
+        <div class="flex gap-2 items-center justify-center">
+          <input
+            type="checkbox"
+            id="home-newsletter-checkbox"
+            class="bg-blue"
+          />
+          <label
+            for="home-newsletter-checkbox"
+            class="text-gray text-base font-semibold"
+            >I Accept to Receive the Offers & Discounts from
+            Catering&TiffinService.com</label
+          >
+        </div>
+
+        <div class="flex gap-2 w-full">
+          <input
+            type="text"
+            class="flex-1 p-2 bg-transparent rounded border-2 border-solid border-orange dark:border-blue text-gray"
+            placeholder="Enter Email ID"
+          />
+          <button
+            id="home-newsletter-button"
+            disabled
+            class="px-8 py-2 md:px-0 md:w-1/3 text-white font-semibold text-lg dark:bg-blue bg-orange rounded-xl"
+          >
+            Submit
+          </button>
+        </div>
+
+        <script>
+          document
+            .getElementById("home-newsletter-checkbox")
+            .addEventListener("change", function () {
+              document.getElementById("home-newsletter-button").disabled =
+                !this.checked;
+            });
+        </script>
+      </div>
+
+      <div class="w-full h-0.5 block dark:bg-blue bg-[#e4a86c]"></div>
+
+      <div class="flex flex-col items-center w-1/2 md:w-11/12 gap-2">
+        <p class="text-3xl uppercase font-bold md:text-2xl text-white py-4">
+          FAQ
+        </p>
+        <div class="w-full flex flex-col gap-4">
+          <div class="w-full">
+            <button
+              class="border-orange dark:border-blue border-2 border-solid text-black dark:text-white w-full flex justify-between pl-4 py-2 font-semibold text-lg rounded accordion"
+            >
+              Section 1
+            </button>
+            <div
+              class="p-2 text-white panel hidden rounded"
+              style="background-color: #14181b"
+            >
+              <p class="p-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-col gap-4">
+          <div class="w-full">
+            <button
+              class="border-orange dark:border-blue border-2 border-solid text-black dark:text-white w-full flex justify-between pl-4 py-2 font-semibold text-lg rounded accordion"
+            >
+              Section 1
+            </button>
+            <div
+              class="p-2 text-white panel hidden rounded"
+              style="background-color: #14181b"
+            >
+              <p class="p-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-col gap-4">
+          <div class="w-full">
+            <button
+              class="border-orange dark:border-blue border-2 border-solid text-black dark:text-white w-full flex justify-between pl-4 py-2 font-semibold text-lg rounded accordion"
+            >
+              Section 1
+            </button>
+            <div
+              class="p-2 text-white panel hidden rounded"
+              style="background-color: #14181b"
+            >
+              <p class="p-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full flex flex-col gap-4">
+          <div class="w-full">
+            <button
+              class="border-orange dark:border-blue border-2 border-solid text-black dark:text-white w-full flex justify-between pl-4 py-2 font-semibold text-lg rounded accordion"
+            >
+              Section 1
+            </button>
+            <div
+              class="p-2 text-white panel hidden rounded"
+              style="background-color: #14181b"
+            >
+              <p class="p-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full flex flex-col gap-4">
+          <div class="w-full">
+            <button
+              class="border-orange dark:border-blue border-2 border-solid text-black dark:text-white w-full flex justify-between pl-4 py-2 font-semibold text-lg rounded accordion"
+            >
+              Section 1
+            </button>
+            <div
+              class="p-2 text-white panel hidden rounded"
+              style="background-color: #14181b"
+            >
+              <p class="p-2">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var panels = document.getElementsByClassName("panel");
+
+        for (var i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            var panel = this.nextElementSibling;
+            for (var j = 0; j < panels.length; j++) {
+              if (panels[j] !== panel) {
+                panels[j].style.display = "none";
+                acc[j].classList.remove("active");
+              }
+            }
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+              this.classList.remove("active");
+            } else {
+              panel.style.display = "block";
+              this.classList.add("active");
+            }
+          });
+        }
+      </script>
+    </div>
+
+    <footer
+      class="flex flex-col px-8 md:px-4 py-8 gap-8 bg-[#E0E3E7] dark:bg-[#262d34]"
+    >
+      <div class="flex justify-between md:flex-col gap-4">
+        <div
+          class="p-3 uppercase text-3xl md:text-2xl font-bold rounded bg-white dark:bg-[#14181b] footer-name-div flex justify-center"
+        >
+          <span class="text-[#C33332] dark:text-[#39d2c0]">CATERINGS</span>
+          <span class="text-black dark:text-white">&</span>
+          <span class="text-[#D9822B] dark:text-[#4b39ef]">TIFFINS</span>
+        </div>
+        <div
+          class="flex flex-col gap-1 text-[#181C1F] dark:text-white text-lg md:text-base font-semibold items-end md:items-center"
+        >
+          <p>Register as catering service provider</p>
+          <p>Register as Tiffin service provider</p>
+        </div>
+      </div>
+
+      <div class="flex md:flex-col justify-between md:gap-8 md:items-center">
+        <div
+          class="w-1/5 flex flex-col gap-2 items-start md:w-11/12 text-[#181C1F] dark:text-white md:items-center"
+        >
+          <p class="text-2xl font-semibold">Search</p>
+          <ul
+            class="flex flex-col gap-2 font-semibold text-base md:items-center"
+          >
+            <li>Countries</li>
+            <li>Region</li>
+            <li>Zip Code</li>
+            <li>City</li>
+            <li>Area</li>
+            <li>Cusines</li>
+            <li>Menu</li>
+          </ul>
+        </div>
+        <div
+          class="w-1/5 flex flex-col gap-2 items-start md:w-11/12 text-[#181C1F] dark:text-white md:items-center"
+        >
+          <p class="text-2xl font-semibold">Links</p>
+          <ul
+            class="flex flex-col gap-2 font-semibold text-base md:items-center"
+          >
+            <li>Our Motive</li>
+            <li>Our Mission</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+
+        <div
+          class="w-1/5 flex flex-col gap-2 items-center md:w-11/12 text-[#181C1F] dark:text-white"
+        >
+          <p class="text-2xl font-semibold mr-12 md:mr-0">Partners</p>
+          <ul
+            class="flex flex-col gap-2 font-semibold text-base md:items-center"
+          >
+            <li>Business</li>
+            <li>Affiliate with us</li>
+            <li>Careers</li>
+            <li>Investor relations</li>
+            <li>Partner Dispute</li>
+          </ul>
+        </div>
+        <div
+          class="w-1/5 flex flex-col gap-2 items-end md:w-11/12 text-[#181C1F] dark:text-white md:items-center"
+        >
+          <p class="text-2xl font-semibold">Help Desk</p>
+          <ul
+            class="flex flex-col gap-2 font-semibold text-base md:items-center"
+          >
+            <li>E - mail</li>
+            <li>Raise Ticket</li>
+            <li>Get Call Back</li>
+            <li>My Bookings</li>
+            <li>Wish List</li>
+            <li>My Account</li>
+          </ul>
+        </div>
+        <div
+          class="w-1/5 flex flex-col gap-2 items-end md:w-11/12 text-[#181C1F] dark:text-white md:items-center"
+        >
+          <p class="text-2xl font-semibold mr-6 md:mr-0">Contact us</p>
+          <ul
+            class="flex flex-col gap-2 font-semibold text-base md:items-center"
+          >
+            <li>hello@tecka.com</li>
+            <li>+123456789</li>
+            <li>+23253449</li>
+            <div class="flex gap-2 items-center">
+              <div
+                class="w-7 h-7 rounded-sm flex items-center justify-center bg-white px-1 pt-1"
+              >
+                <img src="./Asstes/Images/Icons/facebook.svg" />
+              </div>
+              <div
+                class="w-8 h-8 rounded-sm flex items-center justify-center px-1 pt-1"
+              >
+                <img src="./Asstes/Images/Icons/instagram.svg" />
+              </div>
+              <div
+                class="w-7 h-7 rounded-sm flex items-center justify-center bg-white px-1 pt-1"
+              >
+                <img src="./Asstes/Images/Icons/twitter.svg" />
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="w-full justify-around md:flex-col md:gap-4 text-base font-semibold flex text-[#181C1F] dark:text-white md:items-center"
+      >
+        <p>Download the App</p>
+        <p>Social Links</p>
+        <p>Countries We Serve</p>
+        <p>Select Currency</p>
+        <p>Language</p>
+      </div>
+
+      <p
+        class="text-center text-[#181C1F] dark:text-white text-base font-semibold"
+      >
+        Copyrights - Catering & Tiffin Service. All Rights Reserved
+      </p>
+    </footer>
+  </body>
+</html>
