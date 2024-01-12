@@ -505,6 +505,9 @@ input[type="number"] {
   .tiffin-card {
     width: 46%;
   }
+  .tiffin-card img {
+    height: 125px;
+  }
 }
 @media (prefers-color-scheme: dark) {
   .tiffin-card {
